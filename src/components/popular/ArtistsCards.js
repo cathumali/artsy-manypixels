@@ -1,4 +1,4 @@
-import React from 'react'
+import React , { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import '../../styles/popular.css';
 
@@ -8,9 +8,8 @@ const ArtistsCards = (props) => {
         <div className="container mt-5 d-flex justify-content-center">
             <div className="row">            
                 { artists?.length && artists.map( (artist,key) => {
-                    console.log(artist)
-                    return(<>
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                    return(<Fragment key={key}>
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12" >
                             <div className="my-card"> 
                                 <img className="my-card-img" src={ artist.image.url } />
                                 <div className="my-card-body trainer-card-body">
@@ -27,7 +26,7 @@ const ArtistsCards = (props) => {
                                 </div>
                             </div>
                         </div>
-                    </>)
+                    </Fragment>)
                 })}  
             </div>
         </div>

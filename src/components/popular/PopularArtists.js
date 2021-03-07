@@ -38,8 +38,8 @@ const query = gql`
     return <>    
         <Container>
           <Row>    
-            <Col> 
-              <h1 >Popular Artists </h1>
+            <Col className="mt-2"> 
+              <h2 >Popular Artists </h2>
             </Col>
           </Row>
           <Row>    
